@@ -47,6 +47,27 @@ nav a:hover {
     color: #007bff;
 }
 
+
+/* Hamburger Menu */
+.menu-button {
+    background-color: #eeeeee;
+    border: 1px solid #999;
+    padding: 5px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.menu-button:hover {
+    background-color: #dddddd;
+}
+
+
+/* Cards */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -112,20 +133,30 @@ nav a:hover {
     background-color: #d68910;
 }
 
+
+/* Tablet */
 @media (max-width: 900px) {
+
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+
+/* Mobile */
 @media (max-width: 600px) {
+
     header {
-        flex-direction: column;
+        flex-direction: row;
         gap: 15px;
     }
 
     nav {
-        gap: 20px;
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
     }
 
     .cards {
